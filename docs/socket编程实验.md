@@ -1,6 +1,6 @@
 # 使用socket实现基础tcp连接
 
-server端代码：
+#### server端代码：
 
 ```c++
 #include <stdio.h>
@@ -87,7 +87,7 @@ int main( int argc, char *argv[] )
 }
 ```
 
-client端代码：
+#### client端代码：
 
 ```c++
 #include <stdio.h>
@@ -163,4 +163,34 @@ int main( int argc, char *argv[] )
 	return 0;
 }
 ```
+
+#### 相关函数
+
+1. ###### `int socket (int domain, int type, int protocol)`
+
+创建socket描述字，相当于文件描述字，可通过它进行读写操作
+
+domain：用于设置网络通讯的域
+
+- AF_UNIX / AF_LOCAL：本地通讯
+- AF_INET：IPv4的Internet协议
+- AF_INET6：IPv6的Internet协议
+
+type：设置套接字通讯的类型
+
+- SOCK_STREAM：TCP连接，提供序列化、可靠、双向连接的字节流
+- SOCK_DGRAM：提供数据包，用于UDP连接
+- SOCK_RAW：RAW类型，提供原属网络协议访问
+
+protocol：用于制定某些协议的特定类型，一般为0
+
+2. ###### `int bind (int sockfd, const struct sockaddr* addr, socklen_t addrlen)`
+
+将特定地址和端口赋给socket
+
+sockfd：监听接口的套接字文件描述符，通过socket获得
+
+addr：需要绑定的IP和端口
+
+addrlen：addr的结构体大小
 
