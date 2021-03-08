@@ -1,6 +1,6 @@
 # notes
 
-记录下遇到的问题和一些心得，避免再遇到时忘记
+balabalabala
 
 ------
 
@@ -8,4 +8,5 @@
 2. [socket基础编程实验](docs/socket编程实验.md)
 3. [tar解压缩](docs/tar解压缩.md)
 4. [leetcode](docs/leetcode.md)
+5. [leetcode_hot100](docs/leetcode_hot100.md)
 
